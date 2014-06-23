@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+  <head><title>Blog</title></head>
+    <center>
+   <h1>BLOG </h1>
+  </center>
+
+</html> 
+
+<?php
+
+include_once("settings/settings.inc.php"); 
+
+$conexion = @mysql_connect(SQL_HOST, SQL_USER, SQL_PWD) or die(mysql_error());
+$db = @mysql_select_db(SQL_DB, $conexion) or die(mysql_error());
+$sql      = "select temas.*, usuarios.nombre from temas, usuarios where temas.id_usuario = usuarios.id";
+$temas    = @mysql_query($sql, $conexion);
+
+echo "<table border='2'>";
+while ($tema = @mysql_fetch_array($temas))
+{
+
+    echo "<tr>";
+      echo"<td colspan = '2'><h2>".$tema['titulo']."</h2></td>";
+      echo"<td><button>Comentar</button></td>";
+      echo"<td><button>Editar</button></td>";
+      echo"<td><button>Borrar</button></td>";
+    echo "</tr>";
+             
+    echo "<tr>";
+      echo "<td colspan = '5'>".$tema['fecha_pub']. " - " .$tema['nombre']."</td>";
+    echo "</tr>";
+
+    echo "<tr>";
+      echo "<td> nnn </td>";
+      echo "<td colspan= '4'>".$tema['contenido']."</td>";
+    echo "</tr>";
+
+    echo"<tr>";
+      echo"<td colspan = '5'><button>Like</button></td>";
+    echo"</tr>";
+
+    $sql1        = "select comentarios.*, usuarios.nombre from comentarios, temas, usuarios " . 
+        "where comentarios.id_usuario = usuarios.id and comentarios.id_tema = temas.id and comentarios.id_tema =" . $tema['id'];
+    $comentarios = mysql_query($sql1, $conexion);
+    
+    while ($comentario=@mysql_fetch_array($comentarios))
+    {
+        echo"<tr>";
+          echo"<td colspan = '5'>" . $comentario['nombre'] . " - " . $comentario['fecha_pub']."</td>";
+         echo"</tr>";
+
+        echo"<tr>";  
+          echo"<td><button>Editar</button></td>";
+          echo"<td><button>Borrar</button></td>";
+        echo"</tr>";
+
+        echo"<tr>";
+          echo"<td colspan = '5'>" . $comentario['comentario'] . "</td>";
+        echo"</tr>";
+    }
+}
+echo "</table>";
+
+@mysql_close($conexion);
+
+?>
+Fin 
