@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head><title>BLOG T.I.A 5&deg;</title>
-    <body background="background.jpg">
-</body>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -61,37 +59,34 @@ $comentario = @mysql_query($sql1, $conexion);
 $sqltipo = "select usuarios.tipo from usuarios";
   
     echo "<tr>";
-      echo"<td  colspan = '2'><h2 align='center'><i><b>".$tema['titulo']."</b></i></h2></td>";
-      echo"<td align='right'><a href='megustatema.php?iddecoment=".$tema['id']."'><button>Me Gusta</button></a> ".$tema['megusta']." <a href='editartema.php?id_tema=".$tema['id']."'><button>Editar</button></a> <a href='validareliminartema.php?idelimitema=".$tema['id']."'><button>Borrar</button></a></td>";
+      echo"<td  colspan = '5'><h2 align='center'><i><b>".$tema['titulo']."</b></i></h2></td>";
+      echo"<td align='right'><a href='megustatema.php?iddecoment=".$tema['id']."'><button>Me Gusta</button></a><b> ".$tema['megusta']." <a href='editartema.php?id_tema=".$tema['id']."'></b><button>Editar</button></a> <a href='validareliminartema.php?idelimitema=".$tema['id']."'><button>Borrar</button></a></td>";
     echo "</tr>";
  
 
     echo "<tr>";
-      echo "<td colspan = '2'>".$tema['fecha_pub']." - ". $tema['nombre']."</td>";
+      echo "<td colspan = '6'>".$tema['fecha_pub']." - ". $tema['nombre']."</td>";
     echo "</tr>";
              
     echo "<tr>";
-      echo "<td colspan = '5'><h4>".$tema['contenido']."</h4></td>";
+      echo "<td colspan = '6'><h4>".$tema['contenido']."</h4></td>";
     echo "</tr>";
 
 
     echo"<tr>";
-      echo"<td colspan = '5'><a href='comentar.php?idtemacoment=".$tema['id']."'><button>Comentar</button></a></td>";
+      echo"<td colspan = '6'><a href='comentar.php?idtemacoment=".$tema['id']."'><button>Comentar</button></a></td>";
     echo"</tr>";
 
 
          while($comentarios = @mysql_fetch_array($comentario))
         {
-
          echo"<tr>";
-          echo"<td colspan = '3'><i><b>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</td>";
+          echo"<td colspan = '6'><i><b><tt>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</tt></td>";
          echo"</tr>";
 
-
-        echo"<tr><DIV ALIGN=center>";  
-          echo"<td><a href='editarcomentario.php?id_com=".$comentarios['id']."'><button>Editar</button></a> <a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
-        echo"</tr></div>";
-
+        echo"<tr><DIV ALIGN=center><p>";  
+          echo"<td colspan = '6'><a href='editarcomentario.php?id_com=".$comentarios['id']."'><button>Editar</button></a> <a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
+        echo"</p></tr></div>";
         }
 }
 echo "</table>";
@@ -111,22 +106,22 @@ $comentario = @mysql_query($sql1, $conexion);
 $sqltipo = "select usuarios.tipo from usuarios";
   
     echo "<tr>";
-      echo"<td  colspan = '2'><h2 align='center'>".$tema['titulo']."</h2></td>";
+      echo"<td  colspan = '5'><h2 align='center'>".$tema['titulo']."</h2></td>";
       echo"<td align='right'><a href='megustatema.php?iddecoment=".$tema['id']."'><button>Me Gusta</button></a><i><b> ".$tema['megusta']."</i></b>  <a href='editartema.php?id_tema=".$tema['id']."'><button>Editar</button></a> <a href='validareliminartema.php?idelimitema=".$tema['id']."'><button>Borrar</button></a></td>";
     echo "</tr>";
  
 
     echo "<tr>";
-      echo "<td colspan = '2'>".$tema['fecha_pub']." - ". $tema['nombre']."</td>";
+      echo "<td colspan = '6'>".$tema['fecha_pub']." - ". $tema['nombre']."</td>";
     echo "</tr>";
              
     echo "<tr>";
-      echo "<td colspan = '5'><h4>".$tema['contenido']."</h4></td>";
+      echo "<td colspan = '6'><h4>".$tema['contenido']."</h4></td>";
     echo "</tr>";
 
 
     echo"<tr>";
-      echo"<td colspan = '5'><a href='comentar.php?idtemacoment=".$tema['id']."'><button>Comentar</button></a></td>";
+      echo"<td colspan = '6'><a href='comentar.php?idtemacoment=".$tema['id']."'><button>Comentar</button></a></td>";
     echo"</tr>";
 
 
@@ -134,12 +129,12 @@ $sqltipo = "select usuarios.tipo from usuarios";
         {
 
          echo"<tr>";
-          echo"<td colspan = '3'><i><b>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</td>";
+          echo"<td colspan = '6'><i><b><tt>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</tt></td>";
          echo"</tr>";
 
 
         echo"<tr><DIV ALIGN=center>";  
-          echo"<td><a href='editarcomentario.php?id_com=".$comentarios['id']."'><button>Editar</button></a> <a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
+          echo"<td colspan = '6'><a href='editarcomentario.php?id_com=".$comentarios['id']."'><button>Editar</button></a> <a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
         echo"</tr></div>";
 
         }
@@ -161,22 +156,22 @@ $comentario = @mysql_query($sql1, $conexion);
 $sqltipo = "select usuarios.tipo from usuarios";
   
     echo "<tr>";
-      echo"<td  colspan = '2'><h2 align='center'>".$tema['titulo']."</h2></td>";
+      echo"<td  colspan = '5'><h2 align='center'>".$tema['titulo']."</h2></td>";
       echo"<td align='right'><a href='megustatema.php?iddecoment=".$tema['id']."'><button>Me Gusta</button></a> <i><b>".$tema['megusta']."</b></i></td>";
     echo "</tr>";
  
 
     echo "<tr>";
-      echo "<td colspan = '2'>".$tema['fecha_pub']." - ". $tema['nombre']."</td>";
+      echo "<td colspan = '6'>".$tema['fecha_pub']." - ". $tema['nombre']."</td>";
     echo "</tr>";
              
     echo "<tr>";
-      echo "<td colspan = '5'><h4>".$tema['contenido']."</h4></td>";
+      echo "<td colspan = '6'><h4>".$tema['contenido']."</h4></td>";
     echo "</tr>";
 
 
     echo"<tr>";
-      echo"<td colspan = '5'><a href='comentar.php?idtemacoment=".$tema['id']."'><button>Comentar</button></a></td>";
+      echo"<td colspan = '6'><a href='comentar.php?idtemacoment=".$tema['id']."'><button>Comentar</button></a></td>";
     echo"</tr>";
 
 
@@ -184,12 +179,12 @@ $sqltipo = "select usuarios.tipo from usuarios";
         {
 
          echo"<tr>";
-          echo"<td colspan = '3'><i><b>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</td>";
+          echo"<td colspan = '6'><i><b><tt>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</tt></td>";
          echo"</tr>";
 if($_SESSION['nombre']== $comentarios['nombre']) {
 
         echo"<tr><DIV ALIGN=center>";  
-          echo"<td><a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
+          echo"<td colspan = '6'><a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
         echo"</tr></div>";
       }
       else
@@ -236,7 +231,7 @@ $sqltipo = "select usuarios.tipo from usuarios";
         {
 
          echo"<tr>";
-          echo"<td colspan = '3'><i><b>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</td>";
+          echo"<td colspan = '3'><i><b><tt>" . $comentarios['comentarios'] . "</b></i> - " . $comentarios['fecha_pub']." - " . $comentarios['nombre']."</tt></td>";
          echo"</tr>";
         } 
 

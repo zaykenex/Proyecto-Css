@@ -29,7 +29,7 @@ $usuarios    = @mysql_query($sql, $conexion);
 	<body> 
 	  <center>
 		<center>
-          <h1><font color="black">Panel de contol de usuarios</font></h1>
+          <h1>Panel de contol de usuarios</h1>
         </center>
 		<TABLE BORDER="0" CELLSPACING="18" WIDTH="150">  
           <?php
