@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
