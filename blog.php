@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head><title>BLOG T.I.A 5&deg;</title>
+    <body background="background.jpg">
+</body>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
