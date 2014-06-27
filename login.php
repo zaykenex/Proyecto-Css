@@ -49,9 +49,9 @@
 	<form action="validarlogin.php" method="post" name="login"><br>
 		<tr><td><h2>Inicio de Sesion<h2></td></tr> 		
 		<tr><td><?php echo $mensaje; ?></td><tr> 
-		 <tr><td><label>Usuario<input name="txtusuario" type="text"  id="txtusuario" value="" ></td></tr>
-		 <tr><td><label>Contrase&ntildea<input name="txtpass" type="password" id="password"  value=""></td></tr>
-		 <tr><td><input type="submit" value="Iniciar Sesion">   </form> <a href='registro.php'><button>Registrarse</button></a><right> </td></tr>
+		 <tr><td><label>Usuario<input name="txtusuario" class="form-control" type="text"  id="txtusuario" value="" ></td></tr>
+		 <tr><td><label>Contrase&ntildea<input name="txtpass" class="form-control" type="password" id="password"  value=""></td></tr>
+		 <tr><td><input type="submit" class="btn btn-success" value="Iniciar Sesion">   </form> <a href='registro.php'><button class="btn btn-success">Registrarse</button></a><right> </td></tr>
 
  </table>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
