@@ -45,12 +45,12 @@ $usuarios    = @mysql_query($sql, $conexion);
               echo"<tr>";
           	    echo "<td><i><center>".$usuario['nombre']."</center></i></td>";
              	  echo "<td><i><center>".$usuario['usuario']."</center></i></td>";
-              	echo "<td><a href='validarcontrolusuario.php?tipo=1&idcusu=".$usuario['id']."'><button>Administrador</button></a></td>";
-                echo "<td><a href='validarcontrolusuario.php?tipo=2&idcusu=".$usuario['id']."'><button>Editor</button></a></td>";
-                echo "<td><a href='validarcontrolusuario.php?tipo=3&idcusu=".$usuario['id']."'><button>Usuario</button></a></td>";
+              	echo "<td><a href='validarcontrolusuario.php?tipo=1&idcusu=".$usuario['id']."'><button class='btn btn-success'>Administrador</button></a></td>";
+                echo "<td><a href='validarcontrolusuario.php?tipo=2&idcusu=".$usuario['id']."'><button class='btn btn-warning'>Editor</button></a></td>";
+                echo "<td><a href='validarcontrolusuario.php?tipo=3&idcusu=".$usuario['id']."'><button class='btn btn-primary'>Usuario</button></a></td>";
              	  echo "<td><b><center>".$usuario['tipo']."</center></b></td>";
-                echo "<td><a href='validarcontrolusuario.php?bidusr=".$usuario['id']."'><button>Borrar</button></a></td>";
-                echo "<td><a href='editarpass.php?idcusu=".$usuario['id']."'><button>Cambiar password</button></a></td>";
+                echo "<td><a href='validarcontrolusuario.php?bidusr=".$usuario['id']."'><button class='btn btn-danger'>Borrar</button></a></td>";
+                echo "<td><a href='editarpass.php?idcusu=".$usuario['id']."'><button class='btn btn-info'>Cambiar password</button></a></td>";
 	   		      echo"</tr>";
 	   	    }
           
@@ -60,8 +60,8 @@ $usuarios    = @mysql_query($sql, $conexion);
 		</table>
     <TABLE BORDER="0" CELLSPACING="18" WIDTH="500">
      <tr>
-      <td><a href='blog.php'><button>Cerrar</button></a></td>
-      <td><a href='registro.php'><button>Agregar Usuario</button></a></td>
+      <td><a href='blog.php'><button class="btn btn-danger">Cerrar</button></a></td>
+      <td><a href='registro.php'><button class="btn btn-default">Agregar Usuario</button></a></td>
      </tr>
     </table>
 	  </center>

@@ -11,7 +11,7 @@
       ?>
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
   	 <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -55,16 +55,16 @@
 <doctype html>
 <html>
 <body>
- <table border="0"> 
+ <table border="0" ALIGN=Center> 
 	<form action="validareditartema.php" method="post" name="editartema"><br>
 		<tr><td><h2>Editar Tema<h2></td></tr> 		 
 		 <tr><td><i>Usuario <?php echo"$usuario"; ?></i></td></tr>
          <tr><td>
          	<input type="hidden" value="<?php echo $id_tema; ?>" name="idtema">
-         	<label>Tema:<input name="temaaeditar" type="text"  id="temaaeditar" value="<?php echo $tema['titulo']; ?>"></td></tr>
+         	<label>Tema:<input class="form-control" name="temaaeditar" type="text"  id="temaaeditar" value="<?php echo $tema['titulo']; ?>"></td></tr>
 		 <tr><td>Contenido:</td></tr>
-		 <tr><td><textarea rows="10" cols="100" name="conteaeditar" id="conteaeditar"><?php echo $tema['contenido']; ?></textarea></td></tr>
-		 <tr><td><input type="submit" value="Editar">	</form> <a href='blog.php'><button>Cancelar</button></a></td></tr>
+		 <tr><td><textarea class="form-control" rows="10" cols="50" name="conteaeditar" id="conteaeditar"><?php echo $tema['contenido']; ?></textarea></td></tr>
+		 <tr><td ALIGN=Center><input class="btn btn-success" type="submit" value="Editar">	</form> <a href='blog.php'><button class="btn btn-danger">Cancelar</button></a></td></tr>
 
  </table>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -74,5 +74,5 @@
 </body>
 </html>
 <html>
-<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 5&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
+<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 6&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
 </html>

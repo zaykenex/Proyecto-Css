@@ -1,4 +1,4 @@
-      <?php
+    <?php
         session_start();
         if (isset($_SESSION["nombre"])) {
           echo "<h1></h1>";
@@ -11,7 +11,7 @@
       ?>
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
      <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,16 +25,16 @@
 </html>
 <html>
 <body>
- <table border="0"> 
+ <table border="0" ALIGN=center> 
 	<form action="validartema.php" method="post" name="tema"><br>
 		<tr><td><h2>Tema Nuevo<h2></td></tr> 		 
 		 <tr><td><?php
           echo "<i>Usuario " .$_SESSION["usuario"]."</i>";
           ?></td></tr>
-         <tr><td><label>Tema:<input name="txttema" type="text"  id="txttema" value="" ></td></tr>
+         <tr><td><label>Tema:<input class="form-control" name="txttema" type="text"  id="txttema" value="" ></td></tr>
 		 <tr><td>Contenido:</td></tr>
-		 <tr><td><textarea name="txtconte" id="txtconte"></textarea></td></tr>
-		 <tr><td><input type="submit" value="Agregar"></form><a href='blog.php'><button>Cancelar</button></a></td></tr>
+		 <tr class="text-center"><td><textarea  class="form-control" rows="3" name="txtconte" id="txtconte"></textarea></td></tr>
+		 <tr class="text-center"><td><input type="submit" class="btn btn-success" value="Agregar"></form><a href='blog.php'><button class="btn btn-danger">Cancelar</button></a></td></tr>
 	
  </table>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

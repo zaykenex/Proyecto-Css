@@ -11,7 +11,7 @@
       ?>
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
      <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,14 +25,14 @@
 </html>
 <html>
 <body>
- <table border="0"> 
+ <table border="0" ALIGN=Center> 
 	<form action="validarcomentario.php" method="post" name="comen"><br>
 		<tr><td><h2>Comentario<h2></td></tr> 		 
 		 <tr><td><?php
           echo "<i>Usuario " .$_SESSION["usuario"]."</i>";
           ?></td></tr>
-		 <tr><td><textarea name="txtcom" id="txtcom"></textarea></td></tr>
-		 <tr><td><input type="submit" value="Comentar"></form> <a href='blog.php'><button>Cancelar</button></a></td></tr>
+		 <tr><td><textarea class="form-control" rows="2" cols="20" name="txtcom" id="txtcom"></textarea></td></tr>
+		 <tr><td ALIGN=Center><input class="btn btn-success" type="submit" value="Comentar"></form> <a href='blog.php'><button class="btn btn-danger">Cancelar</button></a></td></tr>
 
 	
  </table>
@@ -47,5 +47,5 @@
 </body>
 </html>
 <html>
-<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 5&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
+<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 6&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
 </html>

@@ -1,4 +1,4 @@
-v      <?php
+      <?php
         session_start();
         if (isset($_SESSION["nombre"])) {
           echo "<h1></h1>";

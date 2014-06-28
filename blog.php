@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
      <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -26,7 +26,7 @@
         else
         {
           echo "<h1>Bienvenido Invitado</h1>";
-          echo"<DIV ALIGN=right><a href='login.php'><button ALIGN=right class='btn btn-info'>Login</button></a> <a href='registro.php'><button ALIGN=right>Registrarse</button></a></div>";
+          echo"<DIV ALIGN=right><a href='login.php'><button ALIGN=right class='btn btn-info'>Login</button></a> <a href='registro.php'><button class='btn btn-warning' ALIGN=right>Registrarse</button></a></div>";
           $_SESSION['tipo']=0;
         }
       ?> 
@@ -187,7 +187,7 @@ $sqltipo = "select usuarios.tipo from usuarios";
 if($_SESSION['nombre']== $comentarios['nombre']) {
 
         echo"<tr><DIV ALIGN=center>";  
-          echo"<td><a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button class='btn btn-primary'>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
+          echo"<td><a href='validareliminarcomen.php?idelimcom=".$comentarios['id']."'><button class='btn btn-danger'>Borrar</button></a> <a href='megusta.php?iddecoment=".$comentarios['id']."'><button class='btn btn-primary'>Me Gusta</button></a><i><b> ".$comentarios['megusta']."</b></i></td>";
         echo"</tr></div>";
       }
       else
@@ -250,5 +250,5 @@ echo "</table>";
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 <html>
-<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 5&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
+<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 6&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
 </html>
