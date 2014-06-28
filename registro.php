@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
   	 <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,13 +18,13 @@
 <title>Registrarse</title>
 	</head>
 <body>
- <table border="0"> 
+ <table border="0" ALIGN=center> 
 	<form action="validarregistro.php" method="post" name="login"><br>
 		<tr><td><h2>Registrate Aqui<h2></td></tr>
-		<tr><td><label>Nombre<input name="txtnombre" type="text"  id="txtnombre" value="" ></td></tr> 		 
-		 <tr><td><label>Usuario<input name="txtusuario" type="text"  id="txtusuario" value="" ></td></tr>
-		 <tr><td><label>Password<input name="txtpass" type="password" id="password"  value=""></td></tr>
-		 <tr><td><input type="submit" value="Registrar"></form><a href='login.php'><button>Cancelar</button></a></td></tr>
+		<tr><td><label>Nombre<input name="txtnombre" type="text" class="form-control" id="txtnombre" value="" ></td></tr> 		 
+		 <tr><td><label>Usuario<input name="txtusuario" type="text" class="form-control" id="txtusuario" value="" ></td></tr>
+		 <tr><td><label>Password<input name="txtpass" type="password" class="form-control" id="password"  value=""></td></tr>
+		 <tr ALIGN=center><td><input type="submit" class="btn btn-success" value="Registrar"></form><a href='login.php'><button class="btn btn-danger">Cancelar</button></a></td></tr>
 	
  </table>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -32,5 +32,5 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 </body>
-<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 5&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
+<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 6&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
 </html>
