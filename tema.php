@@ -1,3 +1,5 @@
+<link href='icono.ico' rel='shortcut icon' type='image/x-icon'/>
+<link href='icono.ico' rel='icon' type='image/x-icon'/>
     <?php
         session_start();
         if (isset($_SESSION["nombre"])) {

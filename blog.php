@@ -1,3 +1,6 @@
+
+<link href='icono.ico' rel='shortcut icon' type='image/x-icon'/>
+<link href='icono.ico' rel='icon' type='image/x-icon'/>
 <table width="100%" border="1" cellspacing="10" cellpadding="10">
 <ul id='button'>
 <li><a href='blog.php'>Inicio</a></li>

@@ -1,3 +1,5 @@
+<link href='icono.ico' rel='shortcut icon' type='image/x-icon'/>
+<link href='icono.ico' rel='icon' type='image/x-icon'/>
 <!DOCTYPE html>
 <html>
   <head><title>BLOG T.I.A 6&deg;</title>
