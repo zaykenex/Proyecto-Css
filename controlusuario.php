@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head><title>BLOG T.I.A 5&deg;</title>
+  <head><title>BLOG T.I.A 6&deg;</title>
      <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -29,7 +29,7 @@ $usuarios    = @mysql_query($sql, $conexion);
 	<body> 
 	  <center>
 		<center>
-          <h1>Panel de contol de usuarios</h1>
+          <h2>Panel de contol de usuarios</h2>
         </center>
 		<TABLE BORDER="0" CELLSPACING="18" WIDTH="150">  
           <?php
@@ -48,7 +48,7 @@ $usuarios    = @mysql_query($sql, $conexion);
               	echo "<td><a href='validarcontrolusuario.php?tipo=1&idcusu=".$usuario['id']."'><button class='btn btn-success'>Administrador</button></a></td>";
                 echo "<td><a href='validarcontrolusuario.php?tipo=2&idcusu=".$usuario['id']."'><button class='btn btn-warning'>Editor</button></a></td>";
                 echo "<td><a href='validarcontrolusuario.php?tipo=3&idcusu=".$usuario['id']."'><button class='btn btn-primary'>Usuario</button></a></td>";
-             	  echo "<td><b><center>".$usuario['tipo']."</center></b></td>";
+             	  echo "<td><tt><center>".$usuario['tipo']."</center></tt></td>";
                 echo "<td><a href='validarcontrolusuario.php?bidusr=".$usuario['id']."'><button class='btn btn-danger'>Borrar</button></a></td>";
                 echo "<td><a href='editarpass.php?idcusu=".$usuario['id']."'><button class='btn btn-info'>Cambiar password</button></a></td>";
 	   		      echo"</tr>";
@@ -78,5 +78,5 @@ header("location:blog.php");
 }
 ?>
 <html>
-<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 5&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
+<h5 ALIGN=right><i> Joaquin Cueto y Angel Landero T.I.A 6&deg;, Derechos Reservados&reg; Copyright all rights reserved&copy;</i></h5>
 </html>
